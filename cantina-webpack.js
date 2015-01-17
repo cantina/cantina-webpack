@@ -2,7 +2,7 @@ var webpack = require('webpack')
   , path = require('path');
 
 module.exports = function (app) {
-  var staticDir = path.join(app.root, app.conf.get('web:static:dir'));
+  var staticDir = app.conf.get('web:static:dir');
 
   // Plugin namespace.
   app.webpack = {};
@@ -39,6 +39,17 @@ module.exports = function (app) {
 
   // In app start, create the webpack compiler.
   app.hook('start').add(function (next) {
+    // Convert some relative paths to absolute.
+    if (app.webpack.configuration.context) {
+      app.webpack.configuration.context = path.resolve(app.root, app.webpack.configuration.context);
+    }
+    if (app.webpack.configuration.output.path) {
+      app.webpack.configuration.output.path = path.resolve(app.root, app.webpack.configuration.output.path);
+    }
+    if (app.webpack.configuration.resolve.root) {
+      app.webpack.configuration.resolve.root = path.resolve(app.root, app.webpack.configuration.resolve.root);
+    }
+
     // Create and run the compiler.
     log('Webpack: Bundling ...');
     app.webpack.compiler = webpack(app.webpack.configuration, function (err, stats) {
