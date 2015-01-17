@@ -11,9 +11,10 @@
     "cantina-web": "^4.2.3"
   },
   "devDependencies": {
-    "mocha": "~1.12.0",
     "cantina": "^4.1.0",
-    "cantina-web": "^4.2.3"
+    "cantina-web": "^4.2.3",
+    "mocha": "~1.12.0",
+    "moment": "^2.9.0"
   },
   "scripts": {
     "test": "make test"
