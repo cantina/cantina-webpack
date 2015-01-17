@@ -1,0 +1,10 @@
+{
+  "name": "cantina-webpack-example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "webpack": "^1.4.15",
+    "cantina": "^4.1.0",
+    "cantina-web": "^4.2.3"
+  }
+}

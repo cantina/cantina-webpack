@@ -1,0 +1,40 @@
+{
+  "name": "cantina-webpack",
+  "description": "Provides webpack-powered module bundling.",
+  "version": "4.1.0",
+  "main": "cantina-webpack.js",
+  "dependencies": {
+    "webpack": "^1.4.15"
+  },
+  "peerDependencies": {
+    "cantina": "^4.1.0",
+    "cantina-web": "^4.2.3"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "cantina": "^4.1.0",
+    "cantina-web": "^4.2.3"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cantina/cantina-webpack.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "homepage": "https://github.com/cantina/cantina-webpack",
+  "keywords": [
+    "cantina",
+    "webpack"
+  ],
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/cantina/cantina-webpack/issues"
+  }
+}
